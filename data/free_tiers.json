@@ -1,0 +1,232 @@
+{
+  "verified": "2026-10-20",
+  "providers": [
+    {
+      "name": "Google AI Studio",
+      "slug": "google-ai-studio",
+      "models": "8 Gemini / Gemma variants incl. Gemini 2.5 Flash (1M context)",
+      "rate": "5–15 RPM",
+      "quota": "20–1,500 requests/day (by model)",
+      "card": false,
+      "compat": "Partial — OpenAI-compatible endpoint available",
+      "endpoint": "generativelanguage.googleapis.com/v1beta/openai",
+      "docs": "https://ai.google.dev/pricing",
+      "catch": "Free-tier prompts may train models unless you opt out (EU/UK/EEA accounts are exempt by default); the biggest models get the strictest daily caps.",
+      "site_prov": "Google",
+      "steps": [
+        "Go to aistudio.google.com and sign in with any Google account — no billing setup.",
+        "Click Get API key → Create API key, copy the key.",
+        "Point any OpenAI SDK at base URL generativelanguage.googleapis.com/v1beta/openai with the key.",
+        "Start with gemini-2.5-flash: ~15 RPM and 1,500 requests/day free, 1M-token context."
+      ]
+    },
+    {
+      "name": "Groq",
+      "slug": "groq",
+      "models": "Llama 3.3 70B, Mixtral, Gemma, Whisper — fastest inference (~320 tok/s)",
+      "rate": "30 RPM",
+      "quota": "1,000 requests/day",
+      "card": false,
+      "compat": "Yes — OpenAI-compatible",
+      "endpoint": "api.groq.com/openai/v1",
+      "docs": "https://console.groq.com/docs/rate-limits",
+      "catch": "Limits vary slightly per model tier; the free tier is for development and light production, not bulk processing.",
+      "steps": [
+        "Sign up at console.groq.com (email or GitHub login, no card).",
+        "API Keys → Create API Key → copy it.",
+        "Use base URL https://api.groq.com/openai/v1 with any OpenAI SDK.",
+        "Try llama-3.3-70b-versatile — huge quality-per-free-request ratio."
+      ]
+    },
+    {
+      "name": "OpenRouter",
+      "slug": "openrouter",
+      "models": "20+ models tagged :free (Llama 3.3 70B, Qwen3 Coder 1M, gpt-oss 120B…)",
+      "rate": "20 RPM",
+      "quota": "50 requests/day free; 1,000/day after a one-time $10 top-up",
+      "card": false,
+      "compat": "Yes — OpenAI-compatible",
+      "endpoint": "openrouter.ai/api/v1",
+      "docs": "https://openrouter.ai/docs/api-reference/limits",
+      "catch": "The $10 top-up (kept as credit, never consumed by :free models) is what unlocks the practical 1,000/day tier — pure-free accounts get 50/day.",
+      "steps": [
+        "Create an account at openrouter.ai — no card needed.",
+        "Keys → Create Key → copy.",
+        "Base URL https://openrouter.ai/api/v1, then call any model id ending in :free.",
+        "If you need more than 50 req/day, top up $10 once — the credit stays yours."
+      ]
+    },
+    {
+      "name": "Mistral",
+      "slug": "mistral",
+      "models": "Mistral Small/Large, Codestral (32K–256K context)",
+      "rate": "~1 request/second",
+      "quota": "≈1B tokens/month (Experiment tier)",
+      "card": false,
+      "compat": "Yes — OpenAI-compatible",
+      "endpoint": "api.mistral.ai/v1",
+      "docs": "https://docs.mistral.ai/getting-started/pricing",
+      "catch": "Experiment tier requires opting into data training; detach from it (paid tier) for sensitive workloads.",
+      "site_prov": "Mistral",
+      "steps": [
+        "Sign up at console.mistral.ai — no card required.",
+        "Accept the Experiment-tier terms (that is what unlocks the free quota).",
+        "API Keys → Create a new key → copy.",
+        "Base URL https://api.mistral.ai/v1 works with OpenAI SDKs."
+      ]
+    },
+    {
+      "name": "Cerebras",
+      "slug": "cerebras",
+      "models": "Llama 3.3 70B, Qwen, gpt-oss — extreme speed (1,000+ tok/s)",
+      "rate": "30 RPM",
+      "quota": "≈1M tokens/day",
+      "card": false,
+      "compat": "Yes — OpenAI-compatible",
+      "endpoint": "api.cerebras.ai/v1",
+      "docs": "https://inference-docs.cerebras.ai",
+      "catch": "Daily token cap is the binding limit, not request count — long prompts eat it fast.",
+      "steps": [
+        "Register at cloud.cerebras.ai (no card).",
+        "Create an API key from the dashboard.",
+        "Base URL https://api.cerebras.ai/v1 — OpenAI SDK compatible.",
+        "Best free tier for latency-critical chat UX."
+      ]
+    },
+    {
+      "name": "Cloudflare Workers AI",
+      "slug": "cloudflare-workers-ai",
+      "models": "20+ open models (Llama, Qwen, Mistral variants)",
+      "rate": "Fair-use",
+      "quota": "10,000 neurons/day free",
+      "card": false,
+      "compat": "Partial — REST + OpenAI-compatible endpoint",
+      "endpoint": "api.cloudflare.com/client/v4/accounts/{id}/ai/v1",
+      "docs": "https://developers.cloudflare.com/workers-ai/",
+      "catch": "Neurons are Cloudflare's compute unit — a 70B-model request costs far more neurons than a small model.",
+      "steps": [
+        "Create a free Cloudflare account.",
+        "Dashboard → AI → Workers AI → grab your Account ID from the URL.",
+        "Create an API token with Workers AI permission.",
+        "Use the OpenAI-compat endpoint with your account id in the path."
+      ]
+    },
+    {
+      "name": "GitHub Models",
+      "slug": "github-models",
+      "models": "GPT-4o/4.1, Claude 3.5 Sonnet, Llama, Phi, DeepSeek — frontier names for free",
+      "rate": "15 RPM",
+      "quota": "150–1,000 requests/day (by model tier)",
+      "card": false,
+      "compat": "Yes — Azure-based OpenAI-compatible",
+      "endpoint": "models.github.ai/inference",
+      "docs": "https://docs.github.com/en/github-models",
+      "catch": "For prototyping only (GitHub's own terms); low rate limits per model, and it is not meant for production traffic.",
+      "steps": [
+        "Sign in to GitHub → github.com/marketplace/models.",
+        "Pick a model → Playground → Get this model's endpoint.",
+        "Generate a Personal Access Token with models scope.",
+        "Use the endpoint with OpenAI SDK, token as API key."
+      ]
+    },
+    {
+      "name": "NVIDIA NIM",
+      "slug": "nvidia-nim",
+      "models": "Nemotron, Llama variants (128K context)",
+      "rate": "High RPM",
+      "quota": "≈1,000 requests/day",
+      "card": false,
+      "compat": "Partial — OpenAI-compatible endpoints",
+      "endpoint": "integrate.api.nvidia.com/v1",
+      "docs": "https://build.nvidia.com",
+      "catch": "Free credits refresh as promotional 1,000-request batches; enterprise-grade models rotate.",
+      "steps": [
+        "Sign up at build.nvidia.com with email (no card).",
+        "Any model card → Get API Key → copy.",
+        "Base URL https://integrate.api.nvidia.com/v1.",
+        "Good for testing Nemotron and fresh Llama builds early."
+      ]
+    },
+    {
+      "name": "Cohere",
+      "slug": "cohere",
+      "models": "Command R+ (128K context)",
+      "rate": "10–20 RPM",
+      "quota": "≈100 requests/day",
+      "card": false,
+      "compat": "Partial — own SDK + trial keys",
+      "endpoint": "api.cohere.com",
+      "docs": "https://docs.cohere.com/rate-limits",
+      "catch": "Trial keys are non-commercial only — production needs a paid key.",
+      "site_prov": "Cohere",
+      "steps": [
+        "Register at dashboard.cohere.com.",
+        "Trial API key is issued automatically on first login.",
+        "Use the Cohere SDK or REST endpoint.",
+        "Command R+ is the free tier aimed at RAG with citations."
+      ]
+    },
+    {
+      "name": "Hugging Face",
+      "slug": "hugging-face",
+      "models": "100K+ open-source models via Inference Providers",
+      "rate": "Variable",
+      "quota": "Small monthly free credits across providers",
+      "card": false,
+      "compat": "Partial — router has OpenAI-compatible mode",
+      "endpoint": "router.huggingface.co/v1",
+      "docs": "https://huggingface.co/docs/inference-providers",
+      "catch": "Free credits are tiny and provider-dependent; expect this as a sampler, not a workhorse.",
+      "steps": [
+        "Create a free huggingface.co account.",
+        "Settings → Access Tokens → create a fine-grained token.",
+        "Call router.huggingface.co/v1 (OpenAI-compatible) with Bearer token.",
+        "Browse model cards for the exact provider routing ids."
+      ]
+    },
+    {
+      "name": "Chutes",
+      "slug": "chutes",
+      "models": "Community-hosted open models, rotating catalog",
+      "rate": "Variable",
+      "quota": "Community tier with daily caps",
+      "card": false,
+      "compat": "Yes — OpenAI-compatible",
+      "endpoint": "api.chutes.ai",
+      "docs": "https://chutes.ai",
+      "catch": "Community-run capacity: uptime and availability of specific models are best-effort.",
+      "steps": [
+        "Sign up at chutes.ai.",
+        "Generate an API key from the dashboard.",
+        "Base URL https://api.chutes.ai — OpenAI SDK works.",
+        "Check the live catalog before pinning a model id."
+      ]
+    },
+    {
+      "name": "Vercel AI Gateway",
+      "slug": "vercel-ai-gateway",
+      "models": "Multi-provider (BYOK): OpenAI, Anthropic, Google, open models",
+      "rate": "Depends on underlying provider",
+      "quota": "BYOK — your own provider keys/quotas apply",
+      "card": false,
+      "compat": "Yes — unified OpenAI-compatible API",
+      "endpoint": "ai-sdk.vercel.ai",
+      "docs": "https://vercel.com/ai-gateway",
+      "catch": "Not a free quota itself — it unifies and routes the free tiers you already have.",
+      "steps": [
+        "Create a Vercel account → AI Gateway section.",
+        "Add your provider API keys (Groq, Google, etc.) as BYOK credentials.",
+        "Call the gateway endpoint with one unified SDK.",
+        "Route across free tiers with a single base URL."
+      ]
+    }
+  ],
+  "trial_credits": [
+    {"name": "Baseten", "credit": "$30", "note": "Card required after credit runs out", "slug": "baseten"},
+    {"name": "AI21", "credit": "$10", "note": "Jamba family", "slug": "ai21"},
+    {"name": "SambaNova", "credit": "$5", "note": "Llama 3.1 405B, 128K context; card required", "slug": "sambanova"},
+    {"name": "Fireworks", "credit": "$1", "note": "No card required", "slug": "fireworks"},
+    {"name": "Nebius", "credit": "$1", "note": "Open-weight models", "slug": "nebius"},
+    {"name": "DeepSeek", "credit": "10M tokens", "note": "Try R1-class reasoning for free; paid pricing is among the cheapest anyway", "slug": "deepseek", "site_prov": "DeepSeek"}
+  ]
+}
