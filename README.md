@@ -1,7 +1,12 @@
 # Free LLM API Data
 
-Machine-readable LLM API pricing and free-tier data — 109 models across 17 providers,
+![updated weekly](https://img.shields.io/badge/updated-weekly-brightgreen) ![license](https://img.shields.io/badge/license-CC%20BY%204.0-blue) ![models](https://img.shields.io/badge/models-111_%2B_free_tiers-8A2BE2)
+
+Machine-readable LLM API pricing and free-tier data — 111 models across 17 providers,
 plus all 12 permanent free LLM API tiers with rate limits, quotas and credit-card requirements.
+
+> **⭐ If this data saves you time, please star the repo** — it helps other developers find it,
+> and it's what keeps the weekly updates coming.
 
 > This data powers [**LLM Cost Hub**](https://llmcosthub.wiki/) — the free LLM API pricing
 > calculator and comparison site. If you find the data useful, the site is the live,
@@ -14,7 +19,7 @@ plus all 12 permanent free LLM API tiers with rate limits, quotas and credit-car
 
 | File | Contents | Verified |
 |---|---|---|
-| [`data/models.json`](data/models.json) | 109 models: input/output price per 1M tokens, context window, provider, tier, status (current/legacy/preview) | see `"updated"` field |
+| [`data/models.json`](data/models.json) | 111 models: input/output price per 1M tokens, context window, provider, tier, status (current/legacy/preview) | see `"updated"` field |
 | [`data/free_tiers.json`](data/free_tiers.json) | 12 permanent free LLM API tiers (rate limit, quota, card required, endpoint, key-guide steps) + 6 trial-credit offers | see `"verified"` field |
 
 ## Schema highlights
@@ -55,7 +60,7 @@ The JSON files are plain UTF-8 JSON — no dependencies:
 import json, urllib.request
 
 models = json.load(urllib.request.urlopen(
-    "https://raw.githubusercontent.com/<you>/free-llm-api-data/main/data/models.json"))
+    "https://raw.githubusercontent.com/uhmwpe888-beep/free-llm-api-data/main/data/models.json"))
 cheapest = sorted(models["models"], key=lambda m: (3*m["input"]+m["output"]) / 4)[:5]
 ```
 
