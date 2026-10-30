@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13",
+  "updated": "2026-10-23",
   "currency": "USD",
   "unit": "per 1M tokens",
   "sources": [
@@ -1213,6 +1213,28 @@
       "tier": "budget",
       "note": "",
       "status": "current"
+    },
+    {
+      "id": "gpt-6-1-sol",
+      "name": "GPT-6.1 Sol",
+      "provider": "OpenAI",
+      "input": 2.0,
+      "output": 10.0,
+      "context": 1000000,
+      "tier": "frontier",
+      "status": "current",
+      "note": "1M context; 75% automatic prefix caching ($0.50/1M) and 50% batch discount ($1/$5)."
+    },
+    {
+      "id": "claude-sonnet-5-5",
+      "name": "Claude Sonnet 5.5",
+      "provider": "Anthropic",
+      "input": 2.0,
+      "output": 10.0,
+      "context": null,
+      "tier": "frontier",
+      "status": "current",
+      "note": "Lists at $2/$10, matching GPT-6.1 Sol; batch ~50% off and cache reads ~90% off."
     }
   ]
 }
