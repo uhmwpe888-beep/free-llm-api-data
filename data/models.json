@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-23",
+  "updated": "2026-11-06",
   "currency": "USD",
   "unit": "per 1M tokens",
   "sources": [
@@ -989,9 +989,9 @@
       "provider": "Z.AI",
       "input": 1.4,
       "output": 4.4,
-      "context": null,
+      "context": 1000000,
       "tier": "frontier",
-      "note": "Price covers GLM-5.1.",
+      "note": "1M context (extended from 200K); cached input $0.26/1M. Price covers GLM-5.1.",
       "status": "current"
     },
     {
