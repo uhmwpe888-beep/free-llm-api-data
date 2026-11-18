@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06",
+  "updated": "2026-11-18",
   "currency": "USD",
   "unit": "per 1M tokens",
   "sources": [
@@ -493,9 +493,9 @@
       "provider": "Google",
       "input": 2.0,
       "output": 12.0,
-      "context": 1000000,
+      "context": 1048576,
       "tier": "frontier",
-      "note": "Price covers Gemini 3 Pro; 1M context.",
+      "note": "Prompts over 200K input tokens bill the entire request at long-context rates: $4/$18 per 1M (not just the excess).",
       "status": "current"
     },
     {
