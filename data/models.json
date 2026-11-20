@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-18",
+  "updated": "2026-11-20",
   "currency": "USD",
   "unit": "per 1M tokens",
   "sources": [
@@ -1235,6 +1235,17 @@
       "tier": "frontier",
       "status": "current",
       "note": "Lists at $2/$10, matching GPT-6.1 Sol; batch ~50% off and cache reads ~90% off."
+    },
+    {
+      "id": "claude-fable-5-2",
+      "name": "Claude Fable 5.2",
+      "provider": "Anthropic",
+      "input": 8.0,
+      "output": 40.0,
+      "context": 1000000,
+      "tier": "flagship",
+      "status": "current",
+      "note": "Launched Nov 9, 2026 at 20% below Fable 5.1; cache write $10/1M; 1M context."
     }
   ]
 }
