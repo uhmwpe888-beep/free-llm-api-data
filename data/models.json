@@ -484,7 +484,7 @@
       "output": 10.0,
       "context": null,
       "tier": "frontier",
-      "note": "",
+      "note": "Introductory price through Nov 30, 2026 (cached input $0.10/1M); doubles to $4/$20 from Dec 1, 2026. Generally available since Nov 10, 2026.",
       "status": "current"
     },
     {
@@ -921,44 +921,44 @@
       "id": "kimi-k3",
       "name": "Kimi K3",
       "provider": "Moonshot AI",
-      "input": 2.82,
-      "output": 14.08,
+      "input": 3.0,
+      "output": 15.0,
       "context": 1048576,
       "tier": "frontier",
-      "note": "Official list ¥20/¥100 per 1M (CNY), converted at 7.1. Cache-hit input ¥2; cache-write TTL fees apply.",
+      "note": "Moonshot's official USD list price; cached input $0.30/1M. The China platform lists it separately at ¥20/¥100.",
       "status": "current"
     },
     {
       "id": "kimi-k2-7-code",
       "name": "Kimi K2.7 Code",
       "provider": "Moonshot AI",
-      "input": 0.92,
-      "output": 3.8,
+      "input": 0.95,
+      "output": 4.0,
       "context": 262144,
       "tier": "mid",
-      "note": "Official list ¥6.5/¥27 (CNY); cache-hit input ¥1.30.",
+      "note": "Official USD list price; cached input $0.19/1M. An off-peak tier bills at 60% of standard.",
       "status": "current"
     },
     {
       "id": "kimi-k2-7-code-highspeed",
       "name": "Kimi K2.7 Code Highspeed",
       "provider": "Moonshot AI",
-      "input": 1.83,
-      "output": 7.61,
+      "input": 1.9,
+      "output": 8.0,
       "context": 262144,
       "tier": "frontier",
-      "note": "Official list ¥13/¥54 (CNY); 2x price for the low-latency lane.",
+      "note": "Official USD list price; 2x the standard lane for the low-latency highspeed endpoint.",
       "status": "current"
     },
     {
       "id": "kimi-k2-6",
       "name": "Kimi K2.6",
       "provider": "Moonshot AI",
-      "input": 0.92,
-      "output": 3.8,
+      "input": 0.95,
+      "output": 4.0,
       "context": 262144,
       "tier": "mid",
-      "note": "Official list ¥6.5/¥27 (CNY); cache-hit input ¥1.10.",
+      "note": "Official USD list price; same rate as K2.7 Code.",
       "status": "current"
     },
     {
@@ -1268,6 +1268,28 @@
       "tier": "flagship",
       "status": "current",
       "note": "Released Nov 17, 2026 at 20% below GPT-6 Astra; cached input $0.40/1M. Long-context surcharge 2x input / 1.5x output above ~272K tokens."
+    },
+    {
+      "id": "kimi-k3-1-pro",
+      "name": "Kimi K3.1 Pro",
+      "provider": "Moonshot AI",
+      "input": 2.0,
+      "output": 10.0,
+      "context": 1048576,
+      "tier": "frontier",
+      "status": "current",
+      "note": "Released October 2026 at about a third less than Kimi K3; cached input $0.20/1M. 1M context."
+    },
+    {
+      "id": "gemini-4-carbon",
+      "name": "Gemini 4 Carbon",
+      "provider": "Google",
+      "input": 2.0,
+      "output": 10.0,
+      "context": null,
+      "tier": "flagship",
+      "status": "current",
+      "note": "Announced Oct 28, 2026 as Google's next frontier model, at the same introductory price as Argon; doubles to $4/$20 from Dec 1, 2026."
     }
   ]
 }
