@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-20",
+  "updated": "2026-11-24",
   "currency": "USD",
   "unit": "per 1M tokens",
   "sources": [
@@ -62,7 +62,7 @@
       "output": 10.0,
       "context": null,
       "tier": "frontier",
-      "note": "List price also covers GPT-6.1 Sol.",
+      "note": "Launched Sep 22, 2026 at half of GPT-5.6 Sol's price; superseded by the 6.1 and 6.2 Sol updates.",
       "status": "current"
     },
     {
@@ -1222,8 +1222,8 @@
       "output": 10.0,
       "context": 1000000,
       "tier": "frontier",
-      "status": "current",
-      "note": "1M context; 75% automatic prefix caching ($0.50/1M) and 50% batch discount ($1/$5)."
+      "status": "legacy",
+      "note": "Released Sep 29, 2026; now on OpenAI's deprecations list with GPT-6.2 Sol as the replacement. Still serves until its shutdown date."
     },
     {
       "id": "claude-sonnet-5-5",
@@ -1246,6 +1246,28 @@
       "tier": "flagship",
       "status": "current",
       "note": "Launched Nov 9, 2026 at 20% below Fable 5.1; cache write $10/1M; 1M context."
+    },
+    {
+      "id": "gpt-6-2-sol",
+      "name": "GPT-6.2 Sol",
+      "provider": "OpenAI",
+      "input": 2.0,
+      "output": 10.0,
+      "context": 1000000,
+      "tier": "frontier",
+      "status": "current",
+      "note": "Released Nov 17, 2026 as the next generation of GPT-6.1 Sol at the same list price; OpenAI's recommended default for balancing intelligence and cost."
+    },
+    {
+      "id": "gpt-6-2-astra",
+      "name": "GPT-6.2 Astra",
+      "provider": "OpenAI",
+      "input": 8.0,
+      "output": 40.0,
+      "context": null,
+      "tier": "flagship",
+      "status": "current",
+      "note": "Released Nov 17, 2026 at 20% below GPT-6 Astra; cached input $0.40/1M. Long-context surcharge 2x input / 1.5x output above ~272K tokens."
     }
   ]
 }
