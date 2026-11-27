@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-24",
+  "updated": "2026-11-27",
   "currency": "USD",
   "unit": "per 1M tokens",
   "sources": [
@@ -73,8 +73,8 @@
       "output": 20.0,
       "context": 1050000,
       "tier": "frontier",
-      "note": "Long-context surcharge above ~272K tokens; batch 50% off.",
-      "status": "current"
+      "note": "Long-context surcharge above ~272K tokens; batch 50% off. The $4/$20 rate is a promotional price (OpenAI committed 'at least through Nov 21, 2026' and has announced no successor rate). The GPT-5.6 family retires from Chat/Work/Codex on Dec 23, 2026; GPT-6.2 is the replacement line.",
+      "status": "legacy"
     },
     {
       "id": "gpt-5-4",
@@ -117,8 +117,8 @@
       "output": 12.0,
       "context": 1050000,
       "tier": "frontier",
-      "note": "Long-context surcharge above ~272K tokens.",
-      "status": "current"
+      "note": "Long-context surcharge above ~272K tokens. The GPT-5.6 family retires from Chat/Work/Codex on Dec 23, 2026; GPT-6.2 is the replacement line.",
+      "status": "legacy"
     },
     {
       "id": "gpt-5-1",
@@ -161,8 +161,8 @@
       "output": 1.2,
       "context": 1050000,
       "tier": "budget",
-      "note": "Cheapest 1M-context OpenAI model.",
-      "status": "current"
+      "note": "Cheapest 1M-context OpenAI model. The GPT-5.6 family retires from Chat/Work/Codex on Dec 23, 2026; GPT-6.2 is the replacement line.",
+      "status": "legacy"
     },
     {
       "id": "gpt-6-luna",
@@ -484,7 +484,7 @@
       "output": 10.0,
       "context": null,
       "tier": "frontier",
-      "note": "Introductory price through Nov 30, 2026 (cached input $0.10/1M); doubles to $4/$20 from Dec 1, 2026. Generally available since Nov 10, 2026.",
+      "note": "Introductory price through Nov 30, 2026 (cached input $0.10/1M). Confirmed by Google: rises to $4/$20 from Dec 1, 2026. Generally available since Nov 10, 2026.",
       "status": "current"
     },
     {
@@ -1289,7 +1289,7 @@
       "context": null,
       "tier": "flagship",
       "status": "current",
-      "note": "Announced Oct 28, 2026 as Google's next frontier model, at the same introductory price as Argon; doubles to $4/$20 from Dec 1, 2026."
+      "note": "Announced Oct 28, 2026 as Google's next frontier model at the same introductory price as Argon. Confirmed: doubles to $4/$20 from Dec 1, 2026."
     }
   ]
 }
